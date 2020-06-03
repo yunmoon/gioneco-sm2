@@ -27,5 +27,9 @@
     "@types/sm-crypto": "^0.1.0",
     "ts-node": "3.3.0",
     "typescript": "^3.7.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yunmoon/gioneco-sm2.git"
   }
 }
