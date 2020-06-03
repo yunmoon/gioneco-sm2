@@ -1,0 +1,31 @@
+{
+  "name": "gioneco-sm2",
+  "version": "1.0.0",
+  "description": "sm2",
+  "main": "index.js",
+  "scripts": {
+    "build": "rm -rf ./dist && tsc -p .",
+    "test": "node ./test/sm2.test.js"
+  },
+  "keywords": [
+    "sm2",
+    "gioneco"
+  ],
+  "author": "yunmoon",
+  "license": "ISC",
+  "dependencies": {
+    "ben": "0.0.0",
+    "bn.js": "^5.1.2",
+    "ecurve": "^1.0.6",
+    "jsbn": "^1.1.0",
+    "sm-crypto": "^0.1.1"
+  },
+  "devDependencies": {
+    "@types/bn.js": "^4.11.6",
+    "@types/ecurve": "^1.0.0",
+    "@types/node": "^10.12.18",
+    "@types/sm-crypto": "^0.1.0",
+    "ts-node": "3.3.0",
+    "typescript": "^3.7.5"
+  }
+}
