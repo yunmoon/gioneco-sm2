@@ -4,6 +4,14 @@ import { BigInteger, SecureRandom } from "jsbn";
 import * as BN from "bn.js";
 const rng = new SecureRandom();
 import { sm2, KeyPairPoint } from "sm-crypto";
+
+/**
+ * Cipher Mode
+ * - `0`：C1C2C3
+ * - `1`：C1C3C2
+ */
+type CipherMode = 0 | 1;
+
 export class SM2 {
   private curve: Curve;
   constructor() {
@@ -69,5 +77,11 @@ export class SM2 {
     }
   ) {
     return sm2.doVerifySignature(msg, signHex, publicKey, options);
+  }
+  doEncrypt(msg: string, publicKey: string, cipherMode?: CipherMode): string {
+    return sm2.doEncrypt(msg, publicKey, cipherMode);
+  }
+  doDecrypt(encryptData: string, privateKey: string, cipherMode?: CipherMode): string {
+    return sm2.doDecrypt(encryptData, privateKey, cipherMode);
   }
 }
