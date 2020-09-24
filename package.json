@@ -1,8 +1,8 @@
 {
   "name": "gioneco-sm2",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "sm2",
-  "main": "index.js",
+  "main": "./dist/index.js",
   "scripts": {
     "build": "rm -rf ./dist && tsc -p .",
     "test": "node ./test/sm2.test.js"
